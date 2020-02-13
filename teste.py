@@ -17,7 +17,9 @@ while True:
         Usuario_Entrada = input("Digite sua tentantiva...")
 
 tentativas = 3
-while (tentativas > 0 ) :
+restantes  = 1
+while (restantes < 3 ) :
+    print("rodada",restantes,"de",tentativas)
     if Usuario_Entrada ==  0:
         print("Erro no input")
 
@@ -26,16 +28,14 @@ while (tentativas > 0 ) :
         break
     elif Num_Secreto < Usuario_Entrada:
         print("chute muito alto")
-        tentativas = tentativas - 1;
-        print(tentativas)
+        restantes = restantes + 1;
         Usuario_Entrada = input("Digite sua tentativa ... ")
         Usuario_Entrada = int(Usuario_Entrada)
         if Num_Secreto == Usuario_Entrada:
             print("Parabens, voce acertou")
     elif Num_Secreto > Usuario_Entrada:
         print("chute muito baixo")
-        tentativas = tentativas - 1;
-        print(tentativas)
+        restantes = restantes + 1;
         Usuario_Entrada = input("Digite sua tentativa ... ")
         Usuario_Entrada = int(Usuario_Entrada)
         if Num_Secreto == Usuario_Entrada:
