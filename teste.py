@@ -19,7 +19,7 @@ while True:
 tentativas = 3
 restantes  = 1
 while (restantes < 3 ) :
-    print("rodada",restantes,"de",tentativas)
+    print("rodada {} de {}".format(restantes,tentativas))
     if Usuario_Entrada ==  0:
         print("Erro no input")
 
