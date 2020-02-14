@@ -1,5 +1,4 @@
 import random
-
 print("qual seu nome?")
 
 
@@ -8,6 +7,18 @@ Nome_Usuario =  input()
 print("Bem Vindo",Nome_Usuario,sep="-")
 
 Num_Secreto = random.randint(1,100)
+print(Num_Secreto)
+
+print("Selecione seu nível de dificuldade")
+print("fácil (1), médio(2), difícil(3)")
+Nivel_Dificuldade = input("Dificuldade")
+while True:
+    try: 
+        Nivel_Dificuldade = int(Nivel_Dificuldade)
+        break
+    except:  
+          print("Digite 1 para fácil, 2 para médio e 3 para difícil")
+
 
 Usuario_Entrada = input("Digite sua tentativa ... ")
 while True:
@@ -18,9 +29,14 @@ while True:
         print("Digite um número")
         Usuario_Entrada = input("Digite sua tentantiva...")
 
-tentativas = 3
-restantes  = 1
-while (restantes < 3 ) :
+if Nivel_Dificuldade == 1:
+    tentativas= 5
+elif Nivel_Dificuldade == 2:
+    tentativas = 4
+elif Nivel_Dificuldade == 3:
+    tentativas = 3
+restantes = 1                    
+while (restantes < tentativas ) :
     print("rodada {} de {}".format(restantes,tentativas))
     if Usuario_Entrada ==  0:
         print("Erro no input")
