@@ -1,3 +1,5 @@
+import random
+
 print("qual seu nome?")
 
 
@@ -5,7 +7,7 @@ Nome_Usuario =  input()
 
 print("Bem Vindo",Nome_Usuario,sep="-")
 
-Num_Secreto = 24
+Num_Secreto = random.randint(1,100)
 
 Usuario_Entrada = input("Digite sua tentativa ... ")
 while True:
