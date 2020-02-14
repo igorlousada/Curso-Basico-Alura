@@ -35,7 +35,8 @@ elif Nivel_Dificuldade == 2:
     tentativas = 4
 elif Nivel_Dificuldade == 3:
     tentativas = 3
-restantes = 1                    
+restantes = 1  
+pontos  = 1000                  
 while (restantes < tentativas ) :
     print("rodada {} de {}".format(restantes,tentativas))
     if Usuario_Entrada ==  0:
@@ -43,21 +44,29 @@ while (restantes < tentativas ) :
 
     if Num_Secreto == Usuario_Entrada :
         print("Parabens , Voce Acertou")
+        print("Sua pontuação:",pontos)
         break
+        
     elif Num_Secreto < Usuario_Entrada:
         print("chute muito alto")
         restantes = restantes + 1;
+        dist = Usuario_Entrada - Num_Secreto
+        pontos = pontos - dist
         Usuario_Entrada = input("Digite sua tentativa ... ")
         Usuario_Entrada = int(Usuario_Entrada)
         if Num_Secreto == Usuario_Entrada:
             print("Parabens, voce acertou")
+            print("Sua pontuação:",pontos)
     elif Num_Secreto > Usuario_Entrada:
         print("chute muito baixo")
         restantes = restantes + 1;
+        dist = Num_Secreto - Usuario_Entrada
+        pontos = pontos - dist
         Usuario_Entrada = input("Digite sua tentativa ... ")
         Usuario_Entrada = int(Usuario_Entrada)
         if Num_Secreto == Usuario_Entrada:
             print("Parabens, voce acertou")
+            print("Sua pontuação:",pontos)
 
               
 
